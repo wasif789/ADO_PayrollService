@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.SqlClient;
 
 namespace ADO_PayrollService
 {
@@ -7,6 +8,7 @@ namespace ADO_PayrollService
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to ADO payroll service");
+            
         }
     }
 }
