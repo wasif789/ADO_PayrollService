@@ -8,7 +8,9 @@ namespace ADO_PayrollService
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to ADO payroll service");
-            
+            //Create oobject for Employee Repository
+            EmployeeRepo employeeRepository = new EmployeeRepo();
+            employeeRepository.GetSqlData();
         }
     }
 }
