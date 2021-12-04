@@ -47,8 +47,30 @@ namespace ADO_PayrollService
                 //Close sqlDataReader Connection
                 sqlDataReader.Close();
             }
+
             //Close Connection
             sqlConnection.Close();
+        }
+        //UseCase 3: Update Salary to 3000000
+        public void UpdateSalaryQuery()
+        {
+            //Open Connection
+            sqlConnection.Open();
+            string query = "update employee_payroll set [Basic Pay]=300000 where name='ayush'";
+            //Pass query to TSql
+            SqlCommand sqlCommand = new SqlCommand(query, sqlConnection);
+            int result = sqlCommand.ExecuteNonQuery();
+            if (result != 0)
+            {
+                Console.WriteLine("Updated!");
+            }
+            else
+            {
+                Console.WriteLine("Not Updated!");
+            }
+            //Close Connection
+            sqlConnection.Close();
+            GetSqlData();
         }
     }
 }

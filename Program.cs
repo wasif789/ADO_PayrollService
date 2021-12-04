@@ -10,6 +10,7 @@ namespace ADO_PayrollService
             Console.WriteLine("Welcome to ADO payroll service");
             //Create oobject for Employee Repository
             EmployeeRepo employeeRepository = new EmployeeRepo();
+            //employeeRepository.UpdateSalaryQuery();
             employeeRepository.GetSqlData();
         }
     }
